@@ -3,11 +3,9 @@
 # $1 must be a file.s
 
 ASMFILE=$1
-FILENAME="${ASMFILE%.*}"
-
-OBJFILE=$FILENAME".o"
-ELFFILE=$FILENAME".elf"
-HEXFILE=$FILENAME".hex"
+OBJFILE=${ASMFILE%.*}".o"
+ELFFILE=${ASMFILE%.*}".elf"
+HEXFILE=${ASMFILE%.*}".hex"
 
 # assembler
 avr-as -g -mmcu=atmega328p -o $OBJFILE $ASMFILE
