@@ -1,3 +1,5 @@
+; Memory mapping based on Atmega328p's manual
+
 ;
 ; General Purpose Registers ------------
 ;
@@ -34,6 +36,7 @@
 .equ r30, 0x1e
 .equ r31, 0x1f
 ; --------------------------------------
+
 
 ;
 ; General Purpose I/O Registers --------
@@ -104,3 +107,174 @@
 .equ sreg,   0x3f
 ; --------------------------------------
 
+
+;
+; Extended I/O Registers ---------------
+;
+.equ wdtcsr, 0x60
+.equ clkpr,  0x61
+           ; 0x62 reserved
+           ; 0x63 reserved
+.equ prr,    0x64
+           ; 0x65 reserved
+.equ osccal, 0x66
+           ; 0x67 reserved
+.equ pcicr,  0x68
+.equ eicra,  0x69
+           ; 0x6a reserved
+.equ pcmsk0, 0x6b
+.equ pcmsk1, 0x6c
+.equ pcmsk2, 0x6d
+.equ timsk0, 0x6e
+.equ timsk1, 0x6f
+.equ timsk2, 0x70
+           ; 0x71 reserved
+           ; 0x72 reserved
+           ; 0x73 reserved
+           ; 0x74 reserved
+           ; 0x75 reserved
+           ; 0x76 reserved
+           ; 0x77 reserved
+.equ adcl,   0x78
+.equ adch,   0x79
+.equ adcsra, 0x7a
+.equ adcsrb, 0x7b
+.equ admux,  0x7c
+           ; 0x7d reserved
+.equ didr0,  0x7e
+.equ didr1,  0x7f
+.equ tccr1a, 0x80
+.equ tccr1b, 0x81
+.equ tccr1c, 0x82
+           ; 0x83 reserved
+.equ tcnt1l, 0x84
+.equ tcnt1h, 0x85
+.equ icr1l,  0x86
+.equ icr1h,  0x87
+.equ ocr1al, 0x88
+.equ ocr1ah, 0x89
+.equ ocr1bl, 0x8a
+.equ ocr1bh, 0x8b
+           ; 0x8c reserved
+           ; 0x8d reserved
+           ; 0x8e reserved
+           ; 0x8f reserved
+           ; 0x90 reserved
+           ; 0x91 reserved
+           ; 0x92 reserved
+           ; 0x93 reserved
+           ; 0x94 reserved
+           ; 0x95 reserved
+           ; 0x96 reserved
+           ; 0x97 reserved
+           ; 0x98 reserved
+           ; 0x99 reserved
+           ; 0x9a reserved
+           ; 0x9b reserved
+           ; 0x9c reserved
+           ; 0x9d reserved
+           ; 0x9e reserved
+           ; 0x9f reserved
+           ; 0xa0 reserved
+           ; 0xa1 reserved
+           ; 0xa2 reserved
+           ; 0xa3 reserved
+           ; 0xa4 reserved
+           ; 0xa5 reserved
+           ; 0xa6 reserved
+           ; 0xa7 reserved
+           ; 0xa8 reserved
+           ; 0xa9 reserved
+           ; 0xaa reserved
+           ; 0xab reserved
+           ; 0xac reserved
+           ; 0xad reserved
+           ; 0xae reserved
+           ; 0xaf reserved
+.equ tccr2a, 0xb0
+.equ tccr2b, 0xb1
+.equ tcnt2,  0xb2
+.equ ocr2a,  0xb3
+.equ ocr2b,  0xb4
+           ; 0xb5 reserved
+.equ assr,   0xb6
+           ; 0xb7 reserved
+.equ twbr,   0xb8
+.equ twsr,   0xb9
+.equ twar,   0xba
+.equ twdr,   0xbb
+.equ twcr,   0xbc
+.equ twamr,  0xbd
+           ; 0xbe reserved
+           ; 0xbf reserved
+.equ ucsr0a, 0xc0
+.equ ucsr0b, 0xc1
+.equ ucsr0c, 0xc2
+           ; 0xc3 reserved
+.equ ubrr0l, 0xc4
+.equ ubrr0h, 0xc5
+.equ udr0,   0xc6
+           ; 0xc7 reserved
+           ; 0xc8 reserved
+           ; 0xc9 reserved
+           ; 0xca reserved
+           ; 0xcb reserved
+           ; 0xcc reserved
+           ; 0xcd reserved
+           ; 0xce reserved
+           ; 0xcf reserved
+           ; 0xd0 reserved
+           ; 0xd1 reserved
+           ; 0xd2 reserved
+           ; 0xd3 reserved
+           ; 0xd4 reserved
+           ; 0xd5 reserved
+           ; 0xd6 reserved
+           ; 0xd7 reserved
+           ; 0xd8 reserved
+           ; 0xd9 reserved
+           ; 0xda reserved
+           ; 0xdb reserved
+           ; 0xdc reserved
+           ; 0xdd reserved
+           ; 0xde reserved
+           ; 0xdf reserved
+           ; 0xe0 reserved
+           ; 0xe1 reserved
+           ; 0xe2 reserved
+           ; 0xe3 reserved
+           ; 0xe4 reserved
+           ; 0xe5 reserved
+           ; 0xe6 reserved
+           ; 0xe7 reserved
+           ; 0xe8 reserved
+           ; 0xe9 reserved
+           ; 0xea reserved
+           ; 0xeb reserved
+           ; 0xec reserved
+           ; 0xed reserved
+           ; 0xee reserved
+           ; 0xef reserved
+           ; 0xf0 reserved
+           ; 0xf1 reserved
+           ; 0xf2 reserved
+           ; 0xf3 reserved
+           ; 0xf4 reserved
+           ; 0xf5 reserved
+           ; 0xf6 reserved
+           ; 0xf7 reserved
+           ; 0xf8 reserved
+           ; 0xf9 reserved
+           ; 0xfa reserved
+           ; 0xfb reserved
+           ; 0xfc reserved
+           ; 0xfd reserved
+           ; 0xfe reserved
+           ; 0xff reserved
+; --------------------------------------
+
+
+;
+; Other Useful mappings ----------------
+;
+.equ ramend, 0x08ff
